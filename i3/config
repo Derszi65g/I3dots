@@ -156,7 +156,7 @@ bindsym $mod+r mode "resize"
 exec_always ~/.config/polybar/launch.sh
 
 # Screenshots
-bindsym Ctrl+Print exec --no-startup-id maim --format=png "/home/dereck/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
+bindsym Ctrl+Print exec --no-startup-id maim --format=png "~/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
 bindsym $mod+Ctrl+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
 bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
 

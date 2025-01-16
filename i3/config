@@ -13,7 +13,8 @@ font pango:google sans 9
 
 # El entorno I3
 exec --no-startup-id dex --autostart --environment i3
-
+exec_always --no-startup-id wal -R
+exec_always ~/.config/polybar/launch.sh
 # Usa pactl para ujustar el audio de pulseaudio
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -152,9 +153,6 @@ bindsym $mod+r mode "resize"
 #▐▌ ▐▌ █  ▐▌ ▐▌▐▌ ▐▌▐▌   
 #▐▌ ▐▌ █  ▐▛▀▚▖▐▌ ▐▌ ▝▀▚▖
 #▝▚▄▞▘ █  ▐▌ ▐▌▝▚▄▞▘▗▄▄▞▘                                                                      
-#polybar sh
-exec_always ~/.config/polybar/launch.sh
-
 # Screenshots
 bindsym Ctrl+Print exec --no-startup-id maim --format=png "~/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
 bindsym $mod+Ctrl+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
@@ -176,17 +174,22 @@ bindsym $mod+Tab exec "~/.config/rofi/bin/powermenu"
 #▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌ ▐▌    ▐▌   ▐▌   ▐▌ ▐▌
 #▐▌ ▐▌▐▛▀▜▌▐▌   ▐▌   ▐▛▀▘ ▐▛▀▜▌▐▛▀▘ ▐▛▀▀▘▐▛▀▚▖    ▐▛▀▀▘▐▛▀▀▘▐▛▀▜▌
 #▐▙█▟▌▐▌ ▐▌▐▙▄▄▖▐▙▄▄▖▐▌   ▐▌ ▐▌▐▌   ▐▙▄▄▖▐▌ ▐▌    ▐▌   ▐▙▄▄▖▐▌ ▐▌                                                                
-exec_always --no-startup-id feh --bg-fill ~/wallpapers/wuwa1.png
-bindsym $mod+q exec --no-startup-id ~/Descargas/scriptsrar/wallpaper.sh
- 
-# class                 border  backgr. text    indicator child_border
-client.focused          #ff6359 #ff6359 #ffffff #ff6359  #ff6359
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222A
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#exec --no-startup-id ~/.fehbg
+#exec --no-startup-id feh --bg-fill "$(< "${HOME}/.cache/wal/wal")"
+#exec_always --no-startup-id feh --bg-fill ~/wallpapers/may.jpg
+bindsym $mod+w exec --no-startup-id ~/.config/rofi/bin/WallSelect
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color8 #f0f0f0
+set_from_resource $bga i3wm.color4  #f0f0f0
+# class                 border  backgr. text indicator child_border
+client.focused          $bga     $bga     $fg  $bga       $bga
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
 
-client.background       #ffffff
+client.background       $bg
+
 
 #margen
 #smart_gaps on
@@ -219,4 +222,10 @@ bindsym $mod+E exec pcmanfm
 #for_window [class="Pcmanfm"] floating enable 
 
 
+#exec_always --no-startup-id wireplumber
+#exec_always --no-startup-id pipewire
+#exec_always --no-startup-id picom
+#exec --no-startup-id wal -R
+
+#exec_always --no-startup-id wal -R -o ~/.cache/wal/schemes/_home_lil_wall_gengar_png_dark_None_None_1.1.0.json
 

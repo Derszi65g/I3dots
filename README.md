@@ -1,6 +1,6 @@
 # I3dots
 Otro dotfile de I3
-solo copia las carpetas de i3,polybar y rofi en .config 
+solo copia las carpetas de i3,polybar, rofi, python-pywal  en .config 
 
 dependencias: 
 i3 , polybar , rofi , feh , ttf-jetbrains-mono-nerd

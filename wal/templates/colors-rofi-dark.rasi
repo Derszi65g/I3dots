@@ -1,0 +1,18 @@
+* {{
+    BG:    {color4};
+    BGA:   {color1};
+    FG:    {foreground};
+    FGA:   {color5};
+    BDR:   {color6};
+    SEL:   {color7};
+    UGT:   {color8};
+    IMG:   {color9};
+    OFF:   {color10};
+    ON:    {color11};
+    background:     {color4};
+    background-alt: {color5};
+    foreground:     {color0};
+    selected:       {color1};
+    active:         {color15};
+    urgent:         {color1};
+}}

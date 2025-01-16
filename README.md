@@ -1,11 +1,8 @@
 # I3dots
 
-# A
+# Screenshots
 ![](https://github.com/Derszi65g/I3dots/blob/468666fa08e3eac3f833ee829e6af9d60257dbe1/screenshot-20250116-203807Z-all.png)
-Otro dotfile de I3
-solo copia las carpetas de i3,polybar, rofi, wal  en .config 
-
-dependencias: 
+### dependencias: 
 ```
 i3 polybar rofi feh ttf-jetbrains-mono-nerd python-pywal
 ```

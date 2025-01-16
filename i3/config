@@ -154,9 +154,9 @@ bindsym $mod+r mode "resize"
 #▐▌ ▐▌ █  ▐▛▀▚▖▐▌ ▐▌ ▝▀▚▖
 #▝▚▄▞▘ █  ▐▌ ▐▌▝▚▄▞▘▗▄▄▞▘                                                                      
 # Screenshots
-bindsym Ctrl+Print exec --no-startup-id maim --format=png "~/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
-bindsym $mod+Ctrl+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
-bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/Imágenes/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
+bindsym Ctrl+Print exec --no-startup-id  maim --format=png "/home/$USER/screenshots/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
+bindsym $mod+Ctrl+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/screenshots/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
+bindsym Shift+Print exec --no-startup-id maim --noopengl --format=png --select "/home/$USER/screenshots/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
 
 ## Clipboard Screenshots 
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png

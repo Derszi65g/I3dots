@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+rofi_command="rofi -theme $HOME/.config/rofi/themes/powermenu.rasi"
+
+uptime=$(uptime -p | sed -e 's/up //g')
+
+# Options
+if [[ "$DIR" == "powermenus" ]]; then
+	shutdown="⏻"
+	reboot=""
+	suspend=""
+	logout="󰿅"
+	ddir="$HOME/.config/rofi/config"
+else
+
+	# Buttons
+	layout=`cat $HOME/.config/rofi/themes/powermenu.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
+	if [[ "$layout" == "TRUE" ]]; then
+		shutdown="⏻"
+		reboot=""
+		suspend=""
+		logout="󰿅"
+	else
+		shutdown="⏻ Shutdown"
+		reboot=" Restart"
+		suspend=" Sleep"
+		logout="󰿅 Logout"
+	fi
+	ddir="$HOME/.config/rofi/themes"
+fi
+
+# Ask for confirmation
+rdialog () {
+rofi -dmenu\
+    -i\
+    -no-fixed-num-lines\
+    -p "Are You Sure? : "\
+    -theme "$ddir/confirm.rasi"
+}
+
+# Display Help
+show_msg() {
+	rofi -theme "$ddir/askpass.rasi" -e "Options : yes / no / y / n"
+}
+
+# Variable passed to rofi
+options="$suspend\n$logout\n$reboot\n$shutdown"
+
+chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
+case $chosen in
+    $shutdown)
+		systemctl poweroff
+        ;;
+    $reboot) 
+		systemctl reboot
+        ;;
+    $suspend)
+		mpc -q pause
+		amixer set Master mute
+		sh $HOME/.local/bin/lock
+		systemctl suspend
+        ;;
+    $logout)
+		loginctl terminate-session "$(loginctl list-sessions | awk '/$(whoami)/{print $1}' | head -n 1)"
+        ;;
+esac
+

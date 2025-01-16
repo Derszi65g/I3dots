@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Directorio de wallpapers
+WALLPAPER_DIR="$HOME/wall"	
+
+# Obtener la lista de imágenes en el directorio
+wallpapers=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) | sort)
+
+# Crear una lista para Rofi con los nombres de los archivos
+options=""
+while IFS= read -r file; do
+    filename=$(basename "$file")
+    options+="$filename\x00icon\x1f$file\n"
+done <<< "$wallpapers"
+
+# Usar Rofi para seleccionar el wallpaper 
+selected_wallpaper=$(echo -e "$options" | rofi -dmenu -theme "$HOME/.config/rofi/themes/WallSelect.rasi" -theme-str 'element-icon{size:250px;}' "")
+
+# Si se seleccionó un wallpaper, establecerlo como fondo
+if [[ -n "$selected_wallpaper" ]]; then
+    # Obtener la ruta completa del archivo seleccionado
+     wallpaper_path=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) | grep "$selected_wallpaper")
+    # Establecer el fondo de pantalla usando feh
+    wal -i "$wallpaper_path"
+fi

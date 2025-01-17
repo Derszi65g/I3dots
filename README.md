@@ -18,6 +18,8 @@ crea una carpeta llamada wallpapers en tu carpeta home y pega el wallpaper o pon
 |<kbd>Super</kbd> + <kbd> E | pcmanfm
 |<kbd>super</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>| Restart I3
 
+# Screenshots keys
+
 | Keys | Screenshot  |
 |:-|:-|
 |<kbd>super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>|Selection|

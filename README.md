@@ -8,6 +8,8 @@ i3 polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool
 ```
 crea una carpeta llamada wallpapers en tu carpeta home y pega el wallpaper o pon otro no se tu
 
+# keybinding
+
 | Keys | Action |
 |:-|:-|
 |<kbd>super</kbd> + <kbd>A</kbd>|Rofi Launcher

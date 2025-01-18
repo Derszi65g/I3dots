@@ -164,7 +164,8 @@ bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow)
 #bindsym $mod+Shift+S exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 bindsym $mod+Shift+S exec --no-startup-id maim --hidecursor --capturebackground --select | xclip -selection clipboard -t image/png
 #rofi
-bindsym $mod+a exec "rofi -show drun";
+#bindsym $mod+a exec "rofi -show drun";
+bindsym $mod+a exec "~/.config/rofi/bin/launch.sh"
 bindsym $mod+x exec "rofi -show run";
 #bindsym $mod+z exec "rofi -show emoji";
 #bindsym $mod+a exec "/home/dereck/.config/rofi/bin/launcher"
@@ -226,4 +227,5 @@ bindsym $mod+E exec pcmanfm
 #exec_always --no-startup-id pipewire
 #exec_always --no-startup-id picom
 #exec --no-startup-id wal -R
+
 

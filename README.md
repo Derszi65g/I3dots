@@ -10,6 +10,7 @@ i3 polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcma
 ```
 git clone https://github.com/Derszi65g/I3dots.git
 ```
+
 ```
 mkadir wall
 ```

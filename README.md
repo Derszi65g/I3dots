@@ -1,4 +1,4 @@
-# I3dots
+# i3dots
 
 # Screenshots
 
@@ -36,7 +36,15 @@ git clone https://github.com/Derszi65g/I3dots.git
 ```
 
 ```
-mkadir wall
+chmod +x .config/polybar/launch.sh
+```
+
+```
+mkdir screenshots
+```
+
+```
+mkdir wall
 ```
 
 # keybinding

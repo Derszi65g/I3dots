@@ -227,5 +227,3 @@ bindsym $mod+E exec pcmanfm
 #exec_always --no-startup-id picom
 #exec --no-startup-id wal -R
 
-#exec_always --no-startup-id wal -R -o ~/.cache/wal/schemes/_home_lil_wall_gengar_png_dark_None_None_1.1.0.json
-

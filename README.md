@@ -1,8 +1,32 @@
 # I3dots
 
 # Screenshots
-![](https://github.com/Derszi65g/I3dots/blob/468666fa08e3eac3f833ee829e6af9d60257dbe1/screenshot-20250116-203807Z-all.png)
-### dependencias: 
+
+<details><summary><h2>Fullscreen</h2></summary>
+
+![](/assets/screenshot-20250116-203807Z-all.png)
+
+</details><br>
+
+<details><summary><h2>Rofi Launcher</h2></summary>
+
+![](/assets/screenshot-rofi.png)
+
+</details><br>
+
+<details><summary><h2>Wallpaper Selector</h2></summary>
+
+![](/assets/screenshot-wallselector.png)
+
+</details><br>
+
+<details><summary><h2>Rofi Powermenu</h2></summary>
+
+![](/assets/screenshot-powermenu.png)
+
+</details><br>
+
+### Dependencias: 
 ```
 i3 polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcmanfm
 ```

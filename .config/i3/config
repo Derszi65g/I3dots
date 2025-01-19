@@ -165,7 +165,7 @@ bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow)
 bindsym $mod+Shift+S exec --no-startup-id maim --hidecursor --capturebackground --select | xclip -selection clipboard -t image/png
 #rofi
 #bindsym $mod+a exec "rofi -show drun";
-bindsym $mod+a exec "~/.config/rofi/bin/launch.sh"
+bindsym $mod+a exec "~/.config/rofi/bin/launch.sh";
 bindsym $mod+x exec "rofi -show run";
 #bindsym $mod+z exec "rofi -show emoji";
 #bindsym $mod+a exec "/home/dereck/.config/rofi/bin/launcher"
@@ -179,6 +179,7 @@ bindsym $mod+Tab exec "~/.config/rofi/bin/powermenu"
 #exec --no-startup-id feh --bg-fill "$(< "${HOME}/.cache/wal/wal")"
 #exec_always --no-startup-id feh --bg-fill ~/wallpapers/may.jpg
 bindsym $mod+w exec --no-startup-id ~/.config/rofi/bin/WallSelect
+bindsym $mod+S exec --no-startup-id "~/.config/rofi/bin/rofistyle.sh";
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color8 #f0f0f0
 set_from_resource $bga i3wm.color4  #f0f0f0
@@ -222,11 +223,4 @@ bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume 0 +1% #increase soun
 bindsym $mod+E exec pcmanfm 
 #for_window [class="Pcmanfm"] floating enable 
 
-
-#exec_always --no-startup-id wireplumber
-#exec_always --no-startup-id pipewire
 #exec_always --no-startup-id picom
-#exec --no-startup-id wal -R
-
-#exec_always --no-startup-id wal -R -o ~/.cache/wal/schemes/_home_lil_wall_gengar_png_dark_None_None_1.1.0.json
-

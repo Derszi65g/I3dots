@@ -31,20 +31,21 @@
 i3 polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcmanfm
 ```
 # Instalacion 
-```
-git clone https://github.com/Derszi65g/I3dots.git
-```
-
-```
-chmod +x .config/polybar/launch.sh
-```
 
 ```
 mkdir screenshots
 ```
 
 ```
-mkdir wall
+git clone https://github.com/Derszi65g/I3dots.git
+```
+
+```
+cd I3dots
+```
+
+```
+./install.sh
 ```
 
 # keybinding

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman -S i3wm polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcmanfm
+
 [ -d ".config" ] && cp -r .config/* ~/.config/ && echo "Archivos de .config copiados a ~/.config." || echo "No se encontró .config."
 
 [ -d "wall" ] && cp -r wall ~/ && echo "Carpeta wall copiada a ~." || echo "No se encontró wall."

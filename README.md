@@ -43,10 +43,16 @@ git clone https://github.com/Derszi65g/I3dots.git
 ```
 cd I3dots
 ```
+ #Para una instalcion limpia de archlinux  
+
+```
+./install_arch.sh
+```
 
 ```
 ./install.sh
 ```
+
 
 # keybinding
 

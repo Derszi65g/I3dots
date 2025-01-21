@@ -43,12 +43,12 @@ git clone https://github.com/Derszi65g/I3dots.git
 ```
 cd I3dots
 ```
- #Para una instalcion limpia de archlinux  
+ ### Para una instalcion limpia de archlinux vanilla/cachyOS sin escritorio (archinstall)
 
 ```
 ./install_arch.sh
 ```
-
+### Medianamente manual ejecutar este si instalaste las dependencias en otra distro que tenga systemd
 ```
 ./install.sh
 ```

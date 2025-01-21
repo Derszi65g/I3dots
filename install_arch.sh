@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S i3wm polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcmanfm
+sudo pacman -S i3-wm polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcmanfm
 
 [ -d ".config" ] && cp -r .config/* ~/.config/ && echo "Archivos de .config copiados a ~/.config." || echo "No se encontró .config."
 

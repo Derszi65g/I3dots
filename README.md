@@ -43,7 +43,7 @@ git clone https://github.com/Derszi65g/I3dots.git
 ```
 cd I3dots
 ```
- ### Para una instalcion limpia de archlinux vanilla/cachyOS sin escritorio (archinstall)
+ ### Para una instalcion limpia de archlinux vanilla (archinstall)/cachyOS sin entorno grafico
 
 ```
 ./install_arch.sh

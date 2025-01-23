@@ -224,3 +224,6 @@ bindsym $mod+E exec pcmanfm
 #for_window [class="Pcmanfm"] floating enable 
 
 #exec_always --no-startup-id picom
+ 
+ ### Autostart
+  exec_always autotiling -w 1 3 5 7 9

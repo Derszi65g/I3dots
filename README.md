@@ -28,7 +28,7 @@
 
 ### Dependencias: 
 ```
-i3 polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcmanfm
+i3 polybar rofi feh ttf-jetbrains-mono-nerd python-pywal maim xclip xdotool pcmanfm autotiling 
 ```
 # Instalacion 
 
@@ -65,7 +65,7 @@ cd I3dots
 |<kbd>super</kbd> + <kbd>Tab</kbd>|Powermenu
 |<kbd>Super</kbd> + <kbd> E | pcmanfm
 |<kbd>super</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>| Restart I3
-
+|<kbd>Super</kbd> | Hold to drag floating windows to the desired position
 # Screenshots keys on clipboard
 
 | Keys | Screenshot  |

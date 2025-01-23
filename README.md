@@ -43,7 +43,7 @@ git clone https://github.com/Derszi65g/I3dots.git
 ```
 cd I3dots
 ```
- ### Para una instalcion limpia de archlinux vanilla (archinstall)/cachyOS sin entorno grafico
+ ### Para una instalcion limpia de archlinux vanilla (archinstall)/cachyOS sin entorno grafico (tienes que instalar el por tu cuenta un login de tu gusto )
 
 ```
 ./install_arch.sh
@@ -66,10 +66,18 @@ cd I3dots
 |<kbd>Super</kbd> + <kbd> E | pcmanfm
 |<kbd>super</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>| Restart I3
 
-# Screenshots keys
+# Screenshots keys on clipboard
 
 | Keys | Screenshot  |
 |:-|:-|
 |<kbd>super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>|Selection|
 |<kbd>super</kbd> + <kbd>print</kbd>|Active Window
 |<kbd>Print</kbd>|Full Screen|
+
+# Screenshots (directory ~/screenshots)
+
+| Keys | Screenshot  |
+|:-|:-|
+|<kbd>Shift</kbd> + <kbd>print</kbd>|Selection|
+|<kbd>super</kbd> + <kbd>Ctrl</kbd> + <kbd>print</kbd>|Active Window
+|<kbd>Ctrl</kbd> + <kbd>Print</kbd> |Full Screen|

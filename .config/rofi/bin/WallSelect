@@ -14,7 +14,7 @@ while IFS= read -r file; do
 done <<< "$wallpapers"
 
 # Usar Rofi para seleccionar el wallpaper 
-selected_wallpaper=$(echo -e "$options" | rofi -dmenu -theme "$HOME/.config/rofi/themes/WallSelect.rasi" -theme-str 'element-icon{size:250px;}' "")
+selected_wallpaper=$(echo -e "$options" | rofi -dmenu -theme "$HOME/.config/rofi/themes/WallSelect.rasi" -theme-str 'element-icon{size: 450px;}' "")
 
 # Si se seleccionó un wallpaper, establecerlo como fondo
 if [[ -n "$selected_wallpaper" ]]; then

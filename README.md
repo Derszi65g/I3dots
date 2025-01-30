@@ -16,7 +16,7 @@
 
 <details><summary><h2>Wallpaper Selector</h2></summary>
 
-![](/assets/screenshot-wallselector.png)
+![](/assets/walselector.png)
 
 </details><br>
 

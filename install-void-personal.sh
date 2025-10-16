@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S i3 polybar rofi feh pywal maim xclip xdotool pcmanfm ttf-bitstream-vera emptty brightnessctl kitty ark emptty xorg
+sudo xbps-install -S i3 polybar rofi feh pywal maim xclip xdotool pcmanfm ttf-bitstream-vera emptty brightnessctl kitty ark emptty xorg
 
 [ -d ".config" ] && cp -r .config/* ~/.config/ && echo "Archivos de .config copiados a ~/.config." || echo "No se encontró .config."
 
